@@ -10,7 +10,7 @@ Issue reference: https://github.com/symfony/symfony/issues/63318
 # Install dependencies
 composer install
 
-# Run all tests (1 test with 20 samples)
+# Run all tests (1 test with 22 samples)
 composer test
 ```
 
@@ -25,7 +25,7 @@ Either:
                  $exception = NotNormalizableValueException::createForUnexpectedDataType(
                      \sprintf('Failed to denormalize attribute "%s" value for class "%s": '.$e->getMessage(), $attribute, $resolvedClass),
 -                    $data,
-+                    $value,
++                    $data[$attribute],
                      $e instanceof InvalidTypeException ? [$e->expectedType] : ['unknown'],
                      $attributeContext['deserialization_path'] ?? null,
                      false,
