@@ -2,6 +2,8 @@
 
 A project to demonstrate a bug in `symfony/serializer` where `NotNormalizableValueException::getCurrentType()` returns `'array'` instead of the actual type of the problematic value.
 
+Issue reference: https://github.com/symfony/symfony/issues/63318
+
 ## How to see the bug
 
 ```bash
